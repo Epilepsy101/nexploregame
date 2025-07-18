@@ -79,6 +79,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 sprites.onOverlap(SpriteKind.FireBall, SpriteKind.Projectile, function (sprite, otherSprite) {
     sprites.destroy(otherSprite, effects.ashes, 100)
     music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
+    info.changeScoreBy(1)
 })
 info.onScore(30, function () {
     makeLifeHarder = 10
@@ -518,8 +519,7 @@ Doomsday = 0
 DOOOMSDAY = 0
 ScreenshakeStrenght = 2
 game.setGameOverScoringType(game.ScoringType.HighScore)
-music.play(music.stringPlayable("C G E - C - D A ", 160), music.PlaybackMode.LoopingInBackground)
-music.play(music.stringPlayable("C5 B C5 - G - F - ", 160), music.PlaybackMode.LoopingInBackground)
+music.play(music.createSoundEffect(WaveShape.Sine, 5000, 0, 255, 0, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
 game.onUpdateInterval(5000, function () {
     GameUpdate += GameUpdate * -1 / 5
     Speedmultiplier += 0.1
