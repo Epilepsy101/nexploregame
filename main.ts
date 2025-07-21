@@ -150,6 +150,9 @@ function makeTwoEnemies () {
     sendEnemy(xPos, yPos)
     sendEnemy(xPos2, yPos2)
 }
+info.onScore(150, function () {
+    ScreenshakeStrenght += 1
+})
 function sendEnemy (xShift: number, yPos: number) {
     transformIntToPosX(xShift)
     if (yPos == 1) {
@@ -259,6 +262,9 @@ sprites.onDestroyed(SpriteKind.Enemy, function (sprite) {
 })
 sprites.onDestroyed(SpriteKind.Projectile, function (sprite) {
     info.changeScoreBy(1)
+})
+info.onScore(120, function () {
+    ScreenshakeStrenght += 1
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     if (info.highScore() <= info.score()) {
@@ -518,6 +524,7 @@ makeLifeEvenHarder = 0
 Doomsday = 0
 DOOOMSDAY = 0
 ScreenshakeStrenght = 2
+let AbsoluteDOOOMSDAY = 0
 game.setGameOverScoringType(game.ScoringType.HighScore)
 music.play(music.createSoundEffect(WaveShape.Sine, 5000, 0, 255, 0, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
 game.onUpdateInterval(5000, function () {
