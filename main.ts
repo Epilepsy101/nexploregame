@@ -150,6 +150,9 @@ function makeTwoEnemies () {
     sendEnemy(xPos, yPos)
     sendEnemy(xPos2, yPos2)
 }
+info.onScore(175, function () {
+    ScreenshakeStrenght += 1
+})
 info.onScore(150, function () {
     ScreenshakeStrenght += 1
 })
@@ -526,7 +529,8 @@ DOOOMSDAY = 0
 ScreenshakeStrenght = 2
 let AbsoluteDOOOMSDAY = 0
 game.setGameOverScoringType(game.ScoringType.HighScore)
-music.play(music.createSoundEffect(WaveShape.Sine, 5000, 0, 255, 0, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
+music.play(music.stringPlayable("C G E - C - D A ", 160), music.PlaybackMode.LoopingInBackground)
+music.play(music.stringPlayable("C5 B C5 - G - F - ", 160), music.PlaybackMode.LoopingInBackground)
 game.onUpdateInterval(5000, function () {
     GameUpdate += GameUpdate * -1 / 5
     Speedmultiplier += 0.1
