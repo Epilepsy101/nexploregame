@@ -411,7 +411,6 @@ let makeLifeHarder = 0
 let FireBall_Counter = 0
 let mySprite: Sprite = null
 let Speedmultiplier = 0
-blockSettings.clear()
 info.setScore(0)
 Speedmultiplier = 1
 let GameUpdate = 2000
