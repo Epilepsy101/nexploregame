@@ -169,10 +169,16 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         mySprite,
         assets.animation`Jump`,
         100,
-        true
+        false
         )
     } else {
         mySprite.vy = 200
+        animation.runImageAnimation(
+        mySprite,
+        assets.animation`DashDown`,
+        30,
+        false
+        )
     }
     music.play(music.createSoundEffect(WaveShape.Square, 400, 600, 255, 0, 100, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
 })
