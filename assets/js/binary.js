@@ -1,4 +1,4 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v2.0.56/---simulator","cdnUrl":"https://cdn.makecode.com","version":"0.1.3","target":"arcade","targetVersion":"2.0.56","repo":"epilepsy101/nexploregame"}
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v2.0.56/---simulator","cdnUrl":"https://cdn.makecode.com","version":"0.2.0","target":"arcade","targetVersion":"2.0.56","repo":"epilepsy101/nexploregame"}
 // total=2481630 new=24.89% cached=71.00% other=4.11%
 (function (ectx) {
 'use strict';
@@ -577,7 +577,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P36623(s) {
+function _main___P37261(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1412,13 +1412,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P36623.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/settings-blocks/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P36623.continuations = [  ]
+_main___P37261.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/settings-blocks/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P37261.continuations = [  ]
 
-function _main___P36623_mk(s) {
+function _main___P37261_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P36623, depth: s.depth + 1,
+        parent: s, fn: _main___P37261, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -69473,5 +69473,5 @@ const sprites_BaseSpriteSayRenderer__C2273_VT = mkVTable({
 
 const breakpoints = setupDebugger(1, ["transparency16___4771","tile3___4775","tile4___4774","tile1___4772","tile2___4773","Terrain___35751","FireBall___35754","FireBall_Counter___35763","Fireball___35766","mySprite___35772","FireShield___35775","makeLifeHarder___35890","DOOOMSDAY___35898","ScreenshakeStrenght___35902","Doomsday___35954","makeLifeEvenHarder___35973","Speedmultiplier___36038","GameUpdate___36042","DoomsdayLVL2___36022","CometCount2___36020","Comet___36018","noEnemySendCounter___36016","RandomEvent___36014","DoomsdayLevel___36012","CometCount___36010","randLowProj___36030","yPos2___36028","yPos___36036","xPos___36034","xPos2___36026","projectile___36024","actualPosX___36032"])
 
-return _main___P36623
+return _main___P37261
 })
