@@ -731,15 +731,6 @@ game.onUpdateInterval(GameUpdate, function () {
         noEnemySendCounter += 1
     }
 })
-forever(function () {
-    if (mySprite.isHittingTile(CollisionDirection.Bottom) && (controller.left.isPressed() || controller.right.isPressed())) {
-        if (controller.left.isPressed()) {
-        	
-        } else if (controller.right.isPressed()) {
-        	
-        }
-    }
-})
 game.onUpdateInterval(5000 - DoomsdayLevel, function () {
     if (Doomsday == 1) {
         CometCount += 1
